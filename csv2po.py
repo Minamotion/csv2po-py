@@ -52,7 +52,7 @@ for k in tr.keys():
 		vv = v.get(kk)
 		if result.get(kk) == None:
 			result[kk] = f'# Generated using csv2po.py\n# which was made by Minamotion :)\n# https://github.com/Minamotion/csv2po-py\n\nmsgid ""\nmsgstr ""\n"Language: {kk}\\n"\n\n'
-		result[kk] += f'msgid "{k}"\nmsgstr "{vv.replace('"', '""')}"\n\n'
+		result[kk] += f'msgid "{k}"\nmsgstr "{vv.replace('"', '\\"')}"\n\n'
 #endregion
 #region [Write PO files]
 for key, value in result.items():
